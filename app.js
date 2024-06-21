@@ -21,6 +21,7 @@ const session = require("express-session")
 const MongoStore = require("connect-mongo")
 const listings = require("./routes/listing");
 const reviews = require("./routes/review");
+const expressErr = require('./utils/expressErr');
 
 const db_Url = process.env.DB_URL
 
@@ -90,6 +91,14 @@ app.use("/listings", listings);
 app.use("/listings/:id/reviews", reviews);
 app.use("/", userRouter);
 
+app.all("*",(req,res,next)=>{
+    next(new expressErr(404,"page not found "))
+})
+
+app.use("*",(err,req,res,next)=>{
+    const { statusCode = 500, message = "page not found | click on explore button" } = err;
+    res.status(statusCode).render("error", { message });
+})
 
 app.use((err, req, res, next) => {
     const { statusCode = 500, message = "Something went wrong" } = err;
