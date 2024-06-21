@@ -1,0 +1,146 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-airbnb{
+    color: #fe284d;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+
+/* footer */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.content {
+    flex: 1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info {
+    text-align: center;
+    display: flex;
+    background-color: #ebebeb;
+    height: 8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Changed from space-evenly to center */
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links, .f-info-socials, .msg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+
+
+
+/* card */
+
+.card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0;
+}
+
+.card-text p {
+    font-weight: 400 !important;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+/* card Effect */
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+
+.btn-edit {
+    background-color: #fe284d !important;
+    border: none !important;
+}
+.btn:hover {
+    border: 0.1px solid white !important;
+    
+}
+
+
+/* showPage */
+
+.show-img{
+    height: 30vh;
+}
+
+.btns{
+    display: flex;
+}
+
+.show-card{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* review-card */
+
+.review-card{
+    border: 1px solid black !important;
+    border-radius: 20px !important;
+}
